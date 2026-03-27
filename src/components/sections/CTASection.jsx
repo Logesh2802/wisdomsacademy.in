@@ -44,8 +44,8 @@ export default function CTASection() {
               Scaffold Your Child's <br className="hide-mobile" /> <span style={{ textShadow: '0 0 30px rgba(0,0,0,0.2)' }}>Academic Journey</span>
            </motion.h2>
 
-           <motion.p className="cta-desc" style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.85)', marginBottom: 48, maxWidth: 650, marginLeft: 'auto', margin_right: 'auto' }}>
-              From Primary school to JEE & NEET — get the personalized guidance your child needs at India's most trusted coaching institute.
+           <motion.p className="cta-desc" style={{ fontSize: '1.2rem', color: 'rgba(255,255,255,0.92)', marginBottom: 48, maxWidth: 650, marginLeft: 'auto', marginRight: 'auto' }}>
+              From Primary school to JEE & NEET — get the personalized guidance your child needs at WISDOM'S ACADEMY, India's most trusted coaching institute.
            </motion.p>
 
            <motion.div className="cta-actions" style={{ display: 'flex', justifyContent: 'center', gap: 20, flexWrap: 'wrap' }}>
@@ -54,9 +54,9 @@ export default function CTASection() {
                     Join Now <FiArrowRight />
                  </motion.button>
               </Link>
-              <a href="tel:+919876543210">
+              <a href="tel:+919321302424">
                  <motion.button className="btn-white-outline" whileHover={{ scale: 1.05, y: -5 }} whileTap={{ scale: 0.95 }} style={{ fontSize: '1.1rem', padding: '16px 40px', borderColor: 'rgba(255,255,255,0.6)' }}>
-                    <FiPhone /> Talk to Experts
+                    <FiPhone /> Call Vishnu Sir
                  </motion.button>
               </a>
            </motion.div>

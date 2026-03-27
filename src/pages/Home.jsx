@@ -14,10 +14,10 @@ export default function Home() {
   return (
     <PageWrapper>
       <Helmet>
-        <title>Wisdom's Academy | Class 1 to 12 Coaching — wisdomsacademy.in</title>
+        <title>WISDOM'S ACADEMY | Class 1 to 12 Coaching — wisdomsacademy.in</title>
         <meta
           name="description"
-          content="Wisdom's Academy — India's most trusted coaching institute for Class 1 to 12. Expert faculty for Primary, Middle School, Board Exams, JEE & NEET. Join wisdomsacademy.in today!"
+          content="WISDOM'S ACADEMY — 20+ years of excellence. India's most trusted coaching institute for Class 1 to 12. Join wisdomsacademy.in today!"
         />
       </Helmet>
 

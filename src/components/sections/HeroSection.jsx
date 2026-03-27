@@ -92,7 +92,7 @@ export default function HeroSection() {
               🏫 Class 1 to 12 — All Subjects
             </motion.div>
 
-            <motion.h1 className="hero-title" variants={fadeInUp}>
+              <motion.h1 className="hero-title" variants={fadeInUp}>
               Shape Your{' '}
               <span className="gradient-text">
                 <TypeAnimation
@@ -102,7 +102,7 @@ export default function HeroSection() {
                 />
               </span>
               <br />
-              <span className="shimmer-text">Wisdom's Academy</span>
+              <span className="shimmer-text">WISDOM'S ACADEMY</span>
             </motion.h1>
 
             <motion.p className="hero-desc" variants={fadeInUp}>
@@ -149,7 +149,7 @@ export default function HeroSection() {
                 { number: '2500+', label: 'Students' },
                 { number: '1–12', label: 'All Classes' },
                 { number: '98%', label: 'Success Rate' },
-                { number: '15+', label: 'Years Legacy' },
+                { number: '20+', label: 'Years Legacy' },
               ].map((s) => (
                 <div className="hero-stat" key={s.label}>
                   <span className="hero-stat-number">{s.number}</span>

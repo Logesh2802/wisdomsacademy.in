@@ -110,7 +110,7 @@
 }
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 40px;
   position: relative; z-index: 1;
 }
@@ -129,8 +129,15 @@
 }
 .stat-label { font-size: 0.875rem; color: var(--text-secondary); font-weight: 500; }
 
-@media (max-width: 1024px) { .stats-inner { padding: 40px 28px; } .stats-grid { grid-template-columns: repeat(2,1fr); gap: 32px; } .stat-item:nth-child(2)::after { display: none; } }
-@media (max-width: 640px) { .stat-number { font-size: 2.4rem; } .stat-item::after { display: none !important; } }
+@media (max-width: 1024px) { 
+  .stats-inner { padding: 40px 24px; } 
+  .stat-item::after { display: none !important; }
+}
+@media (max-width: 640px) { 
+  .stat-number { font-size: 2.8rem; } 
+  .stats-grid { gap: 24px; }
+  .stats-inner { padding: 48px 20px; border-radius: 24px; }
+}
 
 /* ── Testimonials ── */
 .testimonials-section { position: relative; overflow: hidden; }
@@ -169,8 +176,12 @@
 .author-stars span { color: #ffd93d; font-size: 0.72rem; }
 .testimonial-result { position: absolute; top: 18px; right: 18px; padding: 4px 10px; border-radius: 9999px; font-size: 0.72rem; font-weight: 800; }
 
-@media (max-width: 1024px) { .testimonials-grid { grid-template-columns: repeat(2,1fr); } }
-@media (max-width: 640px) { .testimonials-grid { grid-template-columns: 1fr; } }
+@media (max-width: 1024px) { 
+  .testimonials-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); } 
+}
+@media (max-width: 640px) { 
+  .testimonials-grid { grid-template-columns: 1fr; gap: 16px; } 
+}
 
 /* ── Faculty ── */
 .faculty-section { position: relative; overflow: hidden; }
@@ -224,8 +235,13 @@
   font-weight: 500;
 }
 
-@media (max-width: 1024px) { .faculty-grid { grid-template-columns: repeat(2,1fr); } }
-@media (max-width: 640px) { .faculty-grid { grid-template-columns: repeat(2,1fr); gap: 14px; } .faculty-card { padding: 24px 14px; } }
+@media (max-width: 1024px) { 
+  .faculty-grid { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); } 
+}
+@media (max-width: 640px) { 
+  .faculty-grid { grid-template-columns: 1fr; gap: 16px; } 
+  .faculty-card { padding: 32px 20px; } 
+}
 
 /* ── Why Section ── */
 .why-section { position: relative; overflow: hidden; }

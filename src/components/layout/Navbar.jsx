@@ -38,7 +38,7 @@ export default function Navbar() {
           <Link to="/" className="nav-logo" onClick={() => setMenuOpen(false)}>
             <div className="nav-logo-icon">🎓</div>
             <div className="nav-logo-text">
-              <span className="nav-logo-name">Wisdom's Academy</span>
+              <span className="nav-logo-name">WISDOM'S ACADEMY</span>
               <span className="nav-logo-tagline">wisdomsacademy.in</span>
             </div>
           </Link>
@@ -58,9 +58,9 @@ export default function Navbar() {
           </ul>
 
           <div className="nav-cta">
-            <a href="tel:+919876543210" className="nav-phone">
+            <a href="tel:+919321302424" className="nav-phone">
               <FiPhone size={16} />
-              <span>+91 98765 43210</span>
+              <span>9321302424</span>
             </a>
             <Link to="/contact">
               <motion.button

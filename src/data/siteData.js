@@ -134,7 +134,7 @@ export const coursesData = [
       'Case Studies & Practicals',
       'Board Excellence Focus',
     ],
-    gradient: 'linear-gradient(135deg, #ff9f43, #ffd93d)',
+    gradient: 'linear-gradient(135deg, #ff9f43, #ffd93d',
     bgGradient: 'linear-gradient(135deg, rgba(255,159,67,0.15), rgba(255,217,61,0.08))',
     duration: '2 Years (11 & 12)',
     students: '260+',
@@ -205,7 +205,7 @@ export const facultyData = [
 export const testimonialsData = [
   {
     id: 1,
-    text: "My son Aryan (Class 3) has become so confident in Maths at Wisdom's Academy! The teachers make learning so fun and interactive. His report card went from B to A+ in just one term!",
+    text: "My son Aryan (Class 3) has become so confident in Maths at WISDOM'S ACADEMY! The teachers make learning so fun and interactive. His report card went from B to A+ in just one term!",
     author: 'Mrs. Deepa Rao (Parent)',
     detail: 'Class 3 Student — Score improved 40%',
     emoji: '👩‍👦',
@@ -215,7 +215,7 @@ export const testimonialsData = [
   },
   {
     id: 2,
-    text: "I scored 94% in Class 10 Boards thanks to Wisdom's Academy! The regular mock tests, chapter-wise revision and personal doubt sessions gave me the edge I needed.",
+    text: "I scored 94% in Class 10 Boards thanks to WISDOM'S ACADEMY! The regular mock tests, chapter-wise revision and personal doubt sessions gave me the edge I needed.",
     author: 'Sneha Kapoor',
     detail: 'Class 10 CBSE — 94.6%',
     emoji: '🏆',
@@ -225,7 +225,7 @@ export const testimonialsData = [
   },
   {
     id: 3,
-    text: "Wisdom's Academy transformed my daughter from a struggling Class 7 student to a confident scholar with 91% in Class 8 finals. The faculty's dedication is unmatched!",
+    text: "WISDOM'S ACADEMY transformed my daughter from a struggling Class 7 student to a confident scholar with 91% in Class 8 finals. The faculty's dedication is unmatched!",
     author: 'Mr. Sanjay Mehta (Parent)',
     detail: 'Class 8 Finals — 91% Aggregate',
     emoji: '⭐',
@@ -235,7 +235,7 @@ export const testimonialsData = [
   },
   {
     id: 4,
-    text: "The Class 11–12 PCM batch at Wisdom's Academy is phenomenal. Cleared JEE Mains with 98.4 percentile. The Physics faculty especially are top-notch IIT alumni!",
+    text: "The Class 11–12 PCM batch at WISDOM'S ACADEMY is phenomenal. Cleared JEE Mains with 98.4 percentile. The Physics faculty especially are top-notch IIT alumni!",
     author: 'Aryan Gupta',
     detail: 'JEE Mains — 98.4 Percentile',
     emoji: '🚀',
@@ -255,7 +255,7 @@ export const testimonialsData = [
   },
   {
     id: 6,
-    text: "Wisdom's Academy PCB batch helped me crack NEET with AIR 412! The Biology and Chemistry faculty are exceptional. The study material is the best I've ever seen.",
+    text: "WISDOM'S ACADEMY PCB batch helped me crack NEET with AIR 412! The Biology and Chemistry faculty are exceptional. The study material is the best I've ever seen.",
     author: 'Rohit Kumar',
     detail: 'NEET 2024 — AIR 412',
     emoji: '🎯',
@@ -336,4 +336,10 @@ export const classLevels = [
     bg: 'rgba(255,107,107,0.1)',
     desc: 'JEE · NEET · Commerce — Board + Entrance',
   },
+]
+
+export const resultsBanners = [
+  { id: 1, src: '/results/banner1.jpg', title: 'School 2nd Unit Test Result 2026' },
+  { id: 2, src: '/results/banner3.jpg', title: 'School 2nd Unit Test Results - Detailed' },
+  { id: 3, src: '/results/banner2.jpg', title: 'Our Forthcoming SSC Stars 2026' },
 ]

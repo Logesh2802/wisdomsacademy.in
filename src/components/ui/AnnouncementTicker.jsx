@@ -21,10 +21,12 @@ export default function AnnouncementTicker() {
       background: 'linear-gradient(90deg, rgba(108,99,255,0.12) 0%, rgba(255,107,107,0.08) 50%, rgba(108,99,255,0.12) 100%)',
       borderTop: '1px solid rgba(108,99,255,0.18)',
       borderBottom: '1px solid rgba(108,99,255,0.18)',
-      padding: '11px 0',
+      padding: '12px 0',
       position: 'relative',
       zIndex: 2,
       overflow: 'hidden',
+      marginTop: '40px',
+      marginBottom: '60px',
     }}>
       {/* Left/right fade masks */}
       <div style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: 80, background: 'linear-gradient(90deg, var(--bg-900), transparent)', zIndex: 2, pointerEvents: 'none' }} />

@@ -42,7 +42,7 @@ export default function ClassJourneySection() {
             One Institute. <span className="gradient-text">All 12 Classes.</span>
           </motion.h2>
           <motion.p className="section-subtitle" style={{ margin: '0 auto' }} variants={fadeInUp}>
-            From the first day of school to board exams and competitive entrance tests — Wisdom's Academy walks every step of the journey with your child.
+            From the first day of school to board exams and competitive entrance tests — WISDOM'S ACADEMY walks every step of the journey with your child.
           </motion.p>
         </motion.div>
 

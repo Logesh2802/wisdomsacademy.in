@@ -63,7 +63,7 @@
 
 .nav-logo-tagline {
   font-size: 0.65rem;
-  color: var(--primary-light);
+  color: rgba(255, 255, 255, 0.75);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-weight: 500;

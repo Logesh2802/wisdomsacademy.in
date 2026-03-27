@@ -42,12 +42,12 @@ export default function Footer() {
             <Link to="/" className="nav-logo" style={{ display: 'inline-flex' }}>
               <div className="nav-logo-icon">🎓</div>
               <div className="nav-logo-text">
-                <span className="nav-logo-name">Wisdom's Academy</span>
+                <span className="nav-logo-name">WISDOM'S ACADEMY</span>
                 <span className="nav-logo-tagline">wisdomsacademy.in</span>
               </div>
             </Link>
             <p className="footer-desc">
-              Shaping futures through excellence in education. Your journey to success begins at Wisdom's Academy — where every student's potential is nurtured and realized.
+              Shaping futures through excellence in education since 2004. Your journey to success begins at WISDOM'S ACADEMY — where every student's potential is nurtured and realized.
             </p>
             <div className="footer-socials">
               {socials.map((s) => (
@@ -102,24 +102,23 @@ export default function Footer() {
               <div className="footer-contact-icon"><FiMapPin /></div>
               <div className="footer-contact-text">
                 <strong>Address</strong>
-                123, Knowledge Street, Academic Nagar,<br />
-                Your City - 400001, India
+                C/7 LAXMI NIWAS, PIPELINE KAJUPADA,<br />
+                KURLA MUMBAI 400072
               </div>
             </div>
             <div className="footer-contact-item">
               <div className="footer-contact-icon"><FiPhone /></div>
               <div className="footer-contact-text">
-                <strong>Phone</strong>
-                +91 98765 43210<br />
-                +91 87654 32109
+                <strong>Phone (Vishnu Sir)</strong>
+                9321302424 | 9324753030<br />
+                9867840715 | 7045024786
               </div>
             </div>
             <div className="footer-contact-item">
               <div className="footer-contact-icon"><FiMail /></div>
               <div className="footer-contact-text">
                 <strong>Email</strong>
-                info@wisdomsacademy.in<br />
-                admissions@wisdomsacademy.in
+                wisdomsacademy.in@gmail.com
               </div>
             </div>
           </div>
@@ -127,7 +126,7 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="footer-bottom">
-          <p>© {new Date().getFullYear()} Wisdom's Academy. All rights reserved. Crafted with ❤️ for excellence.</p>
+          <p>© {new Date().getFullYear()} WISDOM'S ACADEMY. All rights reserved. Crafted with ❤️ for excellence.</p>
           <div className="footer-bottom-links">
             <a href="#">Privacy Policy</a>
             <a href="#">Terms of Service</a>
