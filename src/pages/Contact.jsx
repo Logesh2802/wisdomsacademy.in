@@ -306,21 +306,25 @@ export default function Contact() {
       </section>
 
       {/* Map Section */}
-      <section style={{ height: 500, width: '100%', borderTop: '1px solid var(--glass-border)', position: 'relative' }}>
-         <div style={{ position: 'absolute', inset: 0, background: 'rgba(10,10,30,0.4)', zIndex: 1, pointerEvents: 'none', backdropFilter: 'grayscale(1) brightness(0.6)' }} />
-         <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.812!2d72.884934!3d19.093367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8702cad8a0d%3A0x10d102e389445171!2sWISDOM'S%20ACADEMY!5e0!3m2!1sen!2sin!4v1711550000000!5m2!1sen!2sin" 
-            width="100%" 
-            height="100%" 
-            style={{ border: 0 }} 
-            allowFullScreen="" 
-            loading="lazy" 
-            referrerPolicy="no-referrer-when-downgrade"
-         />
-         <motion.div className="glass" style={{ position: 'absolute', bottom: 40, left: '50%', transform: 'translateX(-50%)', padding: '16px 32px', borderRadius: 100, zIndex: 2, pointerEvents: 'none', display: 'flex', alignItems: 'center', gap: 12 }} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <FiMapPin style={{ color: 'var(--secondary)' }} />
-            <span style={{ fontWeight: 700, fontSize: '0.9rem' }}>C/7 LAXMI NIWAS, PIPELINE KAJUPADA, KURLA, MUMBAI 400072</span>
-         </motion.div>
+      <section className="section" style={{ padding: '40px 0 100px 0', background: 'var(--bg-900)' }}>
+         <div className="container">
+            <div style={{ height: 500, width: '100%', borderRadius: 32, overflow: 'hidden', position: 'relative', border: '1px solid var(--glass-border)', boxShadow: '0 40px 100px rgba(0,0,0,0.5)' }}>
+               <div style={{ position: 'absolute', inset: 0, background: 'rgba(10,10,30,0.05)', zIndex: 1, pointerEvents: 'none' }} />
+               <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.812!2d72.884934!3d19.093367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8702cad8a0d%3A0x10d102e389445171!2sWISDOM'S%20ACADEMY!5e0!3m2!1sen!2sin!4v1711550000000!5m2!1sen!2sin" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen="" 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+               />
+               <motion.div className="glass" style={{ position: 'absolute', bottom: 30, left: '50%', transform: 'translateX(-50%)', padding: '14px 28px', borderRadius: 100, zIndex: 2, pointerEvents: 'none', display: 'flex', alignItems: 'center', gap: 12, width: 'max-content', maxWidth: '90%' }} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+                  <FiMapPin style={{ color: 'var(--secondary)' }} />
+                  <span style={{ fontWeight: 700, fontSize: '0.85rem' }}>C/7 LAXMI NIWAS, PIPELINE KAJUPADA, KURLA, MUMBAI 400072</span>
+               </motion.div>
+            </div>
+         </div>
       </section>
     </PageWrapper>
   )
