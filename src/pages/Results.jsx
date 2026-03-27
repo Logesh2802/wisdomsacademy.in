@@ -24,7 +24,6 @@ const successMetrics = [
 ]
 
 export default function Results() {
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 })
   const [refBanners, inViewBanners] = useInView({ triggerOnce: true, threshold: 0.1 })
   const [refStats, inViewStats] = useInView({ triggerOnce: true, threshold: 0.1 })
 
@@ -54,11 +53,11 @@ export default function Results() {
       </section>
 
       {/* Metrics Grid */}
-      <section className="section" style={{ padding: '60px 0 100px 0', position: 'relative', zIndex: 2 }}>
+      <section className="section" style={{ padding: '40px 0 80px 0', position: 'relative', zIndex: 2 }}>
         <div className="container">
           <div className="results-metrics-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 24 }}>
             {successMetrics.map((m, i) => (
-              <motion.div key={m.label} className="glass" style={{ padding: 40, borderRadius: 28, textAlign: 'center', background: 'rgba(15,15,35,0.8)', backdropFilter: 'blur(40px)', border: `1px solid ${m.color}25` }} initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ delay: 0.1 * i }} whileHover={{ y: -8, background: `${m.color}08` }}>
+              <motion.div key={m.label} className="glass" style={{ padding: 40, borderRadius: 28, textAlign: 'center', background: 'rgba(15,15,35,0.8)', backdropFilter: 'blur(40px)', border: `1px solid ${m.color}25` }} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 * i }} whileHover={{ y: -8, background: `${m.color}08` }}>
                 <div style={{ fontSize: '3.5rem', fontWeight: 900, color: m.color, textShadow: `0 0 30px ${m.color}30`, marginBottom: 8 }}>{m.value}</div>
                 <div style={{ fontSize: '1.2rem', fontWeight: 800, color: '#fff', marginBottom: 8 }}>{m.label}</div>
                 <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.8)', lineHeight: 1.6 }}>{m.desc}</p>
@@ -69,7 +68,7 @@ export default function Results() {
       </section>
 
       {/* Result Banners Showcase */}
-      <section className="section" ref={refBanners} style={{ background: 'var(--bg-800)', position: 'relative', overflow: 'hidden' }}>
+      <section className="section" ref={refBanners} style={{ background: 'var(--bg-800)', position: 'relative', overflow: 'hidden', padding: '80px 0' }}>
         <div className="container">
           <motion.div style={{ textAlign: 'center', marginBottom: 64 }} variants={staggerContainerSlow} initial="hidden" animate={inViewBanners ? 'visible' : 'hidden'}>
             <motion.div className="section-tag" style={{ margin: '0 auto 20px' }} variants={fadeInUp}><span className="dot" />Latest Achievements</motion.div>
