@@ -11,6 +11,10 @@ const achievements = [
   '🏅 Class 10 Batch 2024 — Avg 91.6% in Boards',
   '💼 Anjali V. (Class 12 Commerce) — 97 in Accounts',
   '📋 150+ Students Scored 90%+ in Boards 2024',
+  '🌟 Deeshwin M. (Class 5) — 83% in Unit Test',
+  '🏆 Pallavi S. (Class 7) — 80% in Unit Test',
+  '🎯 Lavanya B. (Class 6) — 78% in Unit Test',
+  '🚀 Manav Y. (Class 8) — 78% in Unit Test',
   '🎓 Admissions Open 2025–26 — Classes 1 to 12',
 ]
 
