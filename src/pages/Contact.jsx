@@ -11,7 +11,7 @@ const contactInfo = [
     icon: <FiMapPin />,
     title: 'Visit Us',
     lines: [
-      'C/7 LAXMI NIWAS BESIDE DR. SHARMA DENTAL CLINIC',
+      'C/7 LAXMI NIWAS, BESIDE DR. SHARMA DENTAL CLINIC',
       'PIPELINE KAJUPADA SAKINAKA KURLA',
       'ANDHERI ROAD MUMBAI 400072'
     ],
@@ -328,7 +328,7 @@ export default function Contact() {
                />
                <motion.div className="glass map-label" style={{ position: 'absolute', bottom: 30, left: '50%', transform: 'translateX(-50%)', padding: '14px 28px', borderRadius: 100, zIndex: 2, pointerEvents: 'none', display: 'flex', alignItems: 'center', gap: 12, width: 'max-content', maxWidth: '85%' }} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
                   <FiMapPin style={{ color: 'var(--secondary)', flexShrink: 0 }} />
-                  <span style={{ fontWeight: 700, fontSize: '0.8rem', lineHeight: 1.4 }}>C/7 LAXMI NIWAS, PIPELINE KAJUPADA, KURLA, MUMBAI 400072</span>
+                  <span style={{ fontWeight: 700, fontSize: '0.8rem', lineHeight: 1.4 }}>C/7 LAXMI NIWAS, BESIDE DR. SHARMA DENTAL CLINIC, PIPELINE KAJUPADA, SAKINAKA, KURLA, ANDHERI ROAD, MUMBAI 400072</span>
                </motion.div>
             </div>
          </div>

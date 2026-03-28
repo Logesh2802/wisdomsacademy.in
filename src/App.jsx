@@ -30,8 +30,8 @@ function App() {
             "priceRange": "$$",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "C/7 LAXMI NIWAS, PIPELINE KAJUPADA, KURLA ANDHERI ROAD",
-              "addressLocality": "Sakinaka, Mumbai",
+              "streetAddress": "C/7 LAXMI NIWAS, BESIDE DR. SHARMA DENTAL CLINIC, PIPELINE KAJUPADA, SAKINAKA KURLA ANDHERI ROAD",
+              "addressLocality": "Mumbai",
               "postalCode": "400072",
               "addressCountry": "IN"
             },

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { useInView } from 'react-intersection-observer'
 import { TypeAnimation } from 'react-type-animation'
 import { FiArrowRight, FiPlay } from 'react-icons/fi'
+import logo from '../../assets/logo.png'
 import { fadeInUp, staggerContainer } from '../../utils/animations'
 import { classLevels } from '../../data/siteData'
 import '../../styles/Hero.css'
@@ -181,7 +182,9 @@ export default function HeroSection() {
                 animate={{ y: [0, -10, 0], rotate: [-1, 1, -1] }}
                 transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
               >
-                <span className="fc-icon">🎓</span>
+                <div className="fc-icon">
+                  <img src={logo} alt="Logo" style={{ width: '32px', height: '32px', objectFit: 'contain' }} />
+                </div>
                 <div className="fc-text">
                   <strong>Class 10 Board</strong>
                   <span>98.6% Scored</span>

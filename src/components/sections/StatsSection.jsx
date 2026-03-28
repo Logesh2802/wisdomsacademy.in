@@ -2,6 +2,7 @@ import { motion, useMotionValue, useTransform, animate } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { useEffect } from 'react'
 import { statsData } from '../../data/siteData'
+import logo from '../../assets/logo.png'
 import { fadeInUp, staggerContainer } from '../../utils/animations'
 import '../../styles/Sections.css'
 
@@ -48,7 +49,13 @@ export default function StatsSection() {
                 className="stat-item"
                 variants={fadeInUp}
               >
-                <div className="stat-icon">{stat.icon}</div>
+                <div className="stat-icon">
+                  {stat.icon === '🎓' ? (
+                    <img src={logo} alt="Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                  ) : (
+                    stat.icon
+                  )}
+                </div>
                 <div className="stat-number">
                   <AnimatedNumber value={stat.number} suffix={stat.suffix} delay={i * 0.15} />
                 </div>

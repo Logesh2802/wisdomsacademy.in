@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import logo from '../../assets/logo.png'
 
 const achievements = [
   '🌟 Sneha K. (Class 5) — 98% in Olympiad',
@@ -52,7 +53,12 @@ export default function AnnouncementTicker() {
             }}
           >
             <span style={{ color: 'rgba(108,99,255,0.5)', fontSize: '0.65rem' }}>◆</span>
-            {a}
+            {a.includes('🎓') ? (
+              <>
+                <img src={logo} alt="Logo" style={{ width: '20px', height: '20px', objectFit: 'contain' }} />
+                {a.replace('🎓', '')}
+              </>
+            ) : a}
           </span>
         ))}
       </motion.div>

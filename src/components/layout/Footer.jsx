@@ -4,6 +4,7 @@ import { FiMapPin, FiPhone, FiMail, FiArrowRight } from 'react-icons/fi'
 import {
   FaFacebookF, FaInstagram, FaYoutube, FaTwitter, FaTelegramPlane
 } from 'react-icons/fa'
+import logo from '../../assets/logo.png'
 import '../../styles/Footer.css'
 
 const footerLinks = {
@@ -40,7 +41,9 @@ export default function Footer() {
           {/* Brand */}
           <div className="footer-brand">
             <Link to="/" className="nav-logo" style={{ display: 'inline-flex' }}>
-              <div className="nav-logo-icon">🎓</div>
+              <div className="nav-logo-icon">
+                <img src={logo} alt="WISDOM'S ACADEMY Logo" className="logo-img" />
+              </div>
               <div className="nav-logo-text">
                 <span className="nav-logo-name">WISDOM'S ACADEMY</span>
                 <span className="nav-logo-tagline">wisdomsacademy.in</span>
@@ -102,8 +105,9 @@ export default function Footer() {
               <div className="footer-contact-icon"><FiMapPin /></div>
               <div className="footer-contact-text">
                 <strong>Address</strong>
-                C/7 LAXMI NIWAS, PIPELINE KAJUPADA,<br />
-                KURLA MUMBAI 400072
+                C/7 LAXMI NIWAS, BESIDE DR. SHARMA DENTAL CLINIC,<br />
+                PIPELINE KAJUPADA SAKINAKA KURLA ANDHERI ROAD,<br />
+                MUMBAI 400072
               </div>
             </div>
             <div className="footer-contact-item">

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FiPhone } from 'react-icons/fi'
+import logo from '../../assets/logo.png'
 import '../../styles/Navbar.css'
 
 const navLinks = [
@@ -36,7 +37,9 @@ export default function Navbar() {
       >
         <nav className="nav-inner">
           <Link to="/" className="nav-logo" onClick={() => setMenuOpen(false)}>
-            <div className="nav-logo-icon">🎓</div>
+            <div className="nav-logo-icon">
+              <img src={logo} alt="WISDOM'S ACADEMY Logo" className="logo-img" />
+            </div>
             <div className="nav-logo-text">
               <span className="nav-logo-name">WISDOM'S ACADEMY</span>
             </div>
