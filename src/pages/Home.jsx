@@ -14,11 +14,12 @@ export default function Home() {
   return (
     <PageWrapper>
       <Helmet>
-        <title>WISDOM'S ACADEMY | Class 1 to 12 Coaching — wisdomsacademy.in</title>
+        <title>WISDOM'S ACADEMY | Top Coaching in Sakinaka & Kurla (Class 1-12)</title>
         <meta
           name="description"
-          content="WISDOM'S ACADEMY — 20+ years of excellence. India's most trusted coaching institute for Class 1 to 12. Join wisdomsacademy.in today!"
+          content="WISDOM'S ACADEMY: Mumbai's leading coaching for Class 1 to 12. Specializing in JEE, NEET, and Board Excellence in Sakinaka, Kurla, and Andheri-Kurla Road. Join 2500+ successful students today!"
         />
+        <meta name="keywords" content="Coaching in Sakinaka, Kurla Tutorial, JEE Classes Mumbai, NEET Preparation Sakinaka, Class 1-12 Coaching Kurla, Wisdoms Academy Mumbai" />
       </Helmet>
 
       <HeroSection />

@@ -71,8 +71,9 @@ export default function Contact() {
   return (
     <PageWrapper>
       <Helmet>
-        <title>Contact Us | WISDOM'S ACADEMY - Book Your Free Demo Class</title>
-        <meta name="description" content="Reach out to WISDOM'S ACADEMY for Classes 1 to 12 coaching enquiries. Contact Vishnu Sir at 9321302424 or 9867840715." />
+        <title>Contact Us | Book Your FREE Demo Class at Sakinaka - WISDOM'S ACADEMY</title>
+        <meta name="description" content="Reach out to WISDOM'S ACADEMY Sakinaka for Class 1 to 12 enquiries. Call Vishnu Sir at 9321302424. Located near Kurla-Andheri Pipeline Road. Free demo available now!" />
+        <meta name="keywords" content="Contact Wisdoms Academy, Vishnu Sir Phone, Coaching Classes Near Sakinaka Metro, Enrolment FAQ Academy Kurla, Tuition Classes Contact Sakinaka" />
       </Helmet>
 
       {/* Hero */}

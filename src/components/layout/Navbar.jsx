@@ -39,7 +39,6 @@ export default function Navbar() {
             <div className="nav-logo-icon">🎓</div>
             <div className="nav-logo-text">
               <span className="nav-logo-name">WISDOM'S ACADEMY</span>
-              <span className="nav-logo-tagline">wisdomsacademy.in</span>
             </div>
           </Link>
 

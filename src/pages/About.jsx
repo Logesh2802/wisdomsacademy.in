@@ -28,8 +28,9 @@ export default function About() {
   return (
     <PageWrapper>
       <Helmet>
-        <title>About Us | WISDOM'S ACADEMY - Classes 1 to 12 Excellence</title>
-        <meta name="description" content="WISDOM'S ACADEMY - 20+ years of sculpting success for students from Class 1 up to Class 12. Discover our dedicated faculty and student-first philosophy." />
+        <title>About Us | 20+ Years of Academic Excellence - WISDOM'S ACADEMY</title>
+        <meta name="description" content="WISDOM'S ACADEMY - 20+ years of sculpting success for students from Class 1 up to Class 12 in Kurla & Sakinaka. Discover our dedicated faculty and student-first philosophy." />
+        <meta name="keywords" content="Legacy Coaching Sakinaka, Best Tutors Kurla, Wisdoms Academy History, Education Center Sakinaka, Mumbai Coaching History" />
       </Helmet>
 
       {/* Hero */}

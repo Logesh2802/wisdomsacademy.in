@@ -30,8 +30,9 @@ export default function Results() {
   return (
     <PageWrapper>
       <Helmet>
-        <title>Our Results | WISDOM'S ACADEMY - Class 1 to 12 Hall of Fame</title>
-        <meta name="description" content="Witness the excellence of WISDOM'S ACADEMY students across all levels — from primary Olympiads to board exams, JEE, and NEET success stories." />
+        <title>JEE & NEET Results | Hall of Champions - WISDOM'S ACADEMY Kurla</title>
+        <meta name="description" content="Check our latest results: SSC, HSC, JEE, & NEET. Witness the excellence of WISDOM'S ACADEMY students across all levels — from primary Olympiads to State & National Boards." />
+        <meta name="keywords" content="JEE Success Sakinaka, NEET Result Kurla, CBSE Board Toppers, SSC Stars Wisdoms Academy Result 2026, Best Results Coaching Mumbai" />
       </Helmet>
 
       {/* Hero */}
