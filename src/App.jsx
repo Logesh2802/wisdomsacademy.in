@@ -5,6 +5,7 @@ import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import CustomCursor from './components/ui/CustomCursor'
 import ScrollToTop from './components/ui/ScrollToTop'
+import BackToTop from './components/ui/BackToTop'
 import Home from './pages/Home'
 import Courses from './pages/Courses'
 import About from './pages/About'
@@ -61,6 +62,7 @@ function App() {
       </Helmet>
       <CustomCursor />
       <ScrollToTop />
+      <BackToTop />
       <Navbar />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>

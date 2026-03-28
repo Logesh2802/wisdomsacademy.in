@@ -20,6 +20,12 @@ export default function Home() {
           content="WISDOM'S ACADEMY: Mumbai's leading coaching for Class 1 to 12. Specializing in JEE, NEET, and Board Excellence in Sakinaka, Kurla, and Andheri-Kurla Road. Join 2500+ successful students today!"
         />
         <meta name="keywords" content="Coaching in Sakinaka, Kurla Tutorial, JEE Classes Mumbai, NEET Preparation Sakinaka, Class 1-12 Coaching Kurla, Wisdoms Academy Mumbai" />
+        <link rel="canonical" href="https://wisdomsacademy.in" />
+        <meta property="og:title" content="WISDOM'S ACADEMY | Top Coaching in Sakinaka & Kurla" />
+        <meta property="og:description" content="Expert coaching for Class 1-12, JEE, and NEET. Over 20 years of excellence in Sakinaka, Mumbai." />
+        <meta property="og:image" content="https://wisdomsacademy.in/logo.png" />
+        <meta property="og:url" content="https://wisdomsacademy.in" />
+        <meta property="og:type" content="website" />
       </Helmet>
 
       <HeroSection />

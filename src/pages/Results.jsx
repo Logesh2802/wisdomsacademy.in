@@ -33,6 +33,11 @@ export default function Results() {
         <title>JEE & NEET Results | Hall of Champions - WISDOM'S ACADEMY Kurla</title>
         <meta name="description" content="Check our latest results: SSC, HSC, JEE, & NEET. Witness the excellence of WISDOM'S ACADEMY students across all levels — from primary Olympiads to State & National Boards." />
         <meta name="keywords" content="JEE Success Sakinaka, NEET Result Kurla, CBSE Board Toppers, SSC Stars Wisdoms Academy Result 2026, Best Results Coaching Mumbai" />
+        <link rel="canonical" href="https://wisdomsacademy.in/results" />
+        <meta property="og:title" content="Our Results | WISDOM'S ACADEMY Hall of Fame" />
+        <meta property="og:description" content="Witness the excellence — Latest JEE, NEET, and Board Examination results for 2026." />
+        <meta property="og:url" content="https://wisdomsacademy.in/results" />
+        <meta property="og:type" content="website" />
       </Helmet>
 
       {/* Hero */}

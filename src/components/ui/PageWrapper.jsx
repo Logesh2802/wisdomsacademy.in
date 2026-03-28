@@ -3,7 +3,7 @@ import { pageTransition } from '../../utils/animations'
 
 export default function PageWrapper({ children }) {
   return (
-    <motion.div
+    <motion.main
       variants={pageTransition}
       initial="hidden"
       animate="visible"
@@ -11,6 +11,6 @@ export default function PageWrapper({ children }) {
       className="page-wrapper"
     >
       {children}
-    </motion.div>
+    </motion.main>
   )
 }

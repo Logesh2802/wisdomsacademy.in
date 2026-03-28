@@ -28,13 +28,13 @@ export default function Navbar() {
 
   return (
     <>
-      <motion.nav
+      <motion.header
         className={`navbar ${scrolled ? 'scrolled' : ''}`}
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
       >
-        <div className="nav-inner">
+        <nav className="nav-inner">
           <Link to="/" className="nav-logo" onClick={() => setMenuOpen(false)}>
             <div className="nav-logo-icon">🎓</div>
             <div className="nav-logo-text">
@@ -81,8 +81,8 @@ export default function Navbar() {
             <span />
             <span />
           </button>
-        </div>
-      </motion.nav>
+        </nav>
+      </motion.header>
 
       {/* Mobile Menu */}
       <AnimatePresence>
