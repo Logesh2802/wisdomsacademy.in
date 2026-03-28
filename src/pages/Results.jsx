@@ -35,9 +35,13 @@ export default function Results() {
       </Helmet>
 
       {/* Hero */}
-      <section style={{ display: 'flex', alignItems: 'center', paddingTop: 130, paddingBottom: 50, background: 'var(--gradient-hero)', position: 'relative', overflow: 'hidden' }}>
+      <section style={{ display: 'flex', alignItems: 'center', paddingTop: 'clamp(100px, 12vw, 130px)', paddingBottom: 'clamp(30px, 5vw, 50px)', background: 'var(--gradient-hero)', position: 'relative', overflow: 'hidden' }}>
         <div className="grid-overlay" />
-        <motion.div style={{ position: 'absolute', width: 600, height: 600, borderRadius: '50%', background: 'rgba(255,217,61,0.05)', filter: 'blur(100px)', top: -100, right: -100 }} animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.2, 0.1] }} transition={{ duration: 12, repeat: Infinity }} />
+        <motion.div 
+          style={{ position: 'absolute', width: 400, height: 400, borderRadius: '50%', background: 'rgba(255,217,61,0.03)', filter: 'blur(60px)', top: -100, right: -100 }} 
+          animate={{ opacity: [0.1, 0.15, 0.1] }} 
+          transition={{ duration: 10, repeat: Infinity }} 
+        />
         
         <div className="container" style={{ position: 'relative', zIndex: 1, textAlign: 'center' }}>
           <motion.div className="section-tag" style={{ margin: '0 auto 24px' }} variants={fadeInUp} initial="hidden" animate="visible">
@@ -53,11 +57,34 @@ export default function Results() {
       </section>
 
       {/* Metrics Grid */}
-      <section className="section" style={{ padding: '40px 0 80px 0', position: 'relative', zIndex: 2 }}>
+      <section className="section" style={{ padding: 'clamp(20px, 5vw, 40px) 0 clamp(40px, 8vw, 80px) 0', position: 'relative', zIndex: 2 }}>
         <div className="container">
-          <div className="results-metrics-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 24 }}>
+          <div className="results-metrics-grid" style={{ 
+            display: 'grid', 
+            gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 300px), 1fr))', 
+            gap: 'clamp(16px, 4vw, 24px)' 
+          }}>
             {successMetrics.map((m, i) => (
-              <motion.div key={m.label} className="glass" style={{ padding: 40, borderRadius: 28, textAlign: 'center', background: 'rgba(15,15,35,0.8)', backdropFilter: 'blur(40px)', border: `1px solid ${m.color}25` }} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 * i }} whileHover={{ y: -8, background: `${m.color}08` }}>
+              <motion.div 
+                key={m.label} 
+                className="glass" 
+                style={{ 
+                  padding: 'clamp(24px, 5vw, 40px)', 
+                  borderRadius: 28, 
+                  textAlign: 'center', 
+                  background: 'rgba(15,15,35,0.8)', 
+                  backdropFilter: 'blur(30px)', 
+                  border: `1px solid ${m.color}25`,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'center'
+                }} 
+                initial={{ opacity: 0, y: 30 }} 
+                whileInView={{ opacity: 1, y: 0 }} 
+                viewport={{ once: true }} 
+                transition={{ duration: 0.5, delay: 0.1 * i }} 
+                whileHover={{ y: -8, background: `${m.color}08` }}
+              >
                 <div style={{ fontSize: '3.5rem', fontWeight: 900, color: m.color, textShadow: `0 0 30px ${m.color}30`, marginBottom: 8 }}>{m.value}</div>
                 <div style={{ fontSize: '1.2rem', fontWeight: 800, color: '#fff', marginBottom: 8 }}>{m.label}</div>
                 <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.8)', lineHeight: 1.6 }}>{m.desc}</p>
@@ -68,38 +95,99 @@ export default function Results() {
       </section>
 
       {/* Result Banners Showcase */}
-      <section className="section" ref={refBanners} style={{ background: 'var(--bg-800)', position: 'relative', overflow: 'hidden', padding: '80px 0' }}>
+      <section className="section" ref={refBanners} style={{ background: 'var(--bg-800)', position: 'relative', overflow: 'hidden', padding: 'clamp(40px, 8vw, 80px) 0' }}>
         <div className="container">
           <motion.div style={{ textAlign: 'center', marginBottom: 64 }} variants={staggerContainerSlow} initial="hidden" animate={inViewBanners ? 'visible' : 'hidden'}>
             <motion.div className="section-tag" style={{ margin: '0 auto 20px' }} variants={fadeInUp}><span className="dot" />Latest Achievements</motion.div>
-            <motion.h2 className="section-title" variants={fadeInUp}>Result <span className="gradient-text">Banners</span></motion.h2>
+            <motion.h2 className="section-title" variants={fadeInUp}>Our Hall of <span className="gradient-text">Results</span></motion.h2>
           </motion.div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: 32, alignItems: 'stretch' }}>
-            {resultsBanners.map((banner, idx) => (
+          {/* Top 3 Banners - Large Showcase */}
+          <div style={{ 
+            display: 'grid', 
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))', 
+            gap: 'clamp(24px, 5vw, 40px)', 
+            marginBottom: 80 
+          }}>
+            {resultsBanners.slice(0, 3).map((banner, idx) => (
               <motion.div
                 key={banner.id}
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: idx * 0.15 }}
+                transition={{ duration: 0.6, delay: idx * 0.1 }}
                 className="glass"
-                style={{ borderRadius: 24, overflow: 'hidden', border: '1px solid var(--glass-border)', display: 'flex', flexDirection: 'column', background: 'rgba(20,20,40,0.6)' }}
-                whileHover={{ y: -10, borderColor: 'rgba(255,255,255,0.2)' }}
+                style={{ 
+                  borderRadius: 32, 
+                  overflow: 'hidden', 
+                  border: '1.5px solid rgba(108,99,255,0.2)', 
+                  background: 'rgba(20,20,45,0.8)',
+                  boxShadow: '0 20px 50px rgba(0,0,0,0.3)',
+                  display: 'flex',
+                  flexDirection: 'column'
+                }}
+                whileHover={{ y: -10, borderColor: 'rgba(108,99,255,0.4)', boxShadow: '0 30px 60px rgba(108,99,255,0.2)' }}
               >
-                <div style={{ width: '100%', aspectRatio: '1/1.4', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#000' }}>
+                <div style={{ width: '100%', aspectRatio: '1/1.5', overflow: 'hidden', background: '#08081a' }}>
                    <img 
                       src={banner.src} 
                       alt={banner.title} 
-                      style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block' }}
+                      loading="lazy"
+                      style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                    />
                 </div>
-                <div style={{ padding: '20px', textAlign: 'center', background: 'rgba(255,255,255,0.03)', borderTop: '1px solid rgba(255,255,255,0.05)', marginTop: 'auto' }}>
-                   <h3 style={{ fontSize: '1rem', fontWeight: 800, color: '#fff' }}>{banner.title}</h3>
+                <div style={{ padding: '24px', textAlign: 'center', background: 'rgba(108,99,255,0.05)' }}>
+                   <h3 style={{ fontSize: '1.1rem', fontWeight: 800, color: '#fff' }}>{banner.title}</h3>
                 </div>
               </motion.div>
             ))}
           </div>
+
+          <div style={{ textAlign: 'center', marginBottom: 48 }}>
+             <h3 style={{ fontSize: '1.8rem', fontWeight: 900, color: '#fff', marginBottom: 12 }}>Individual Student <span className="gradient-text-gold">Awards</span></h3>
+             <p style={{ color: 'rgba(255,255,255,0.7)', maxWidth: 600, margin: '0 auto' }}>Celebrating every student's hard work and dedication to academic success.</p>
+          </div>
+
+          {/* Individual Banners Grid */}
+          <div style={{ 
+            display: 'grid', 
+            gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 280px), 1fr))', 
+            gap: '24px'
+          }}>
+            {resultsBanners.slice(3).map((banner, idx) => (
+              <motion.div
+                key={banner.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: idx * 0.05 }}
+                className="glass"
+                style={{ 
+                  borderRadius: 20, 
+                  overflow: 'hidden', 
+                  border: '1px solid var(--glass-border)', 
+                  background: 'rgba(20,20,40,0.6)',
+                  height: '100%',
+                  display: 'flex',
+                  flexDirection: 'column'
+                }}
+                whileHover={{ y: -8, borderColor: 'rgba(255,255,255,0.15)' }}
+              >
+                <div style={{ width: '100%', aspectRatio: '1/1.4', overflow: 'hidden', background: '#111' }}>
+                   <img 
+                      src={banner.src} 
+                      alt={banner.title} 
+                      loading="lazy"
+                      style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                   />
+                </div>
+                <div style={{ padding: '16px', textAlign: 'center', background: 'rgba(255,255,255,0.02)', marginTop: 'auto' }}>
+                   <h4 style={{ fontSize: '0.9rem', fontWeight: 700, color: '#fff' }}>{banner.title}</h4>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
         </div>
       </section>
 
@@ -139,8 +227,13 @@ export default function Results() {
       {/* Distinction Stats */}
       <section className="section" ref={refStats} style={{ position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(108,99,255,0.05) 0%, rgba(255,107,107,0.03) 100%)' }} />
-        <div className="container" style={{ position: 'relative', zIndex: 1, paddingBottom: 60 }}>
-          <div className="results-diff-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 60, alignItems: 'center' }}>
+        <div className="container" style={{ position: 'relative', zIndex: 1, paddingBottom: 'clamp(20px, 5vw, 40px)' }}>
+          <div className="results-diff-grid" style={{ 
+            display: 'grid', 
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))', 
+            gap: 'clamp(32px, 8vw, 60px)', 
+            alignItems: 'center' 
+          }}>
              <motion.div variants={fadeInLeft} initial="hidden" animate={inViewStats ? 'visible' : 'hidden'}>
                 <h2 className="section-title">The WISDOM'S ACADEMY <br /><span className="gradient-text">Difference</span></h2>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 20, marginTop: 40 }}>

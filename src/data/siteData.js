@@ -339,7 +339,20 @@ export const classLevels = [
 ]
 
 export const resultsBanners = [
-  { id: 1, src: '/results/banner1.jpg', title: 'School 2nd Unit Test Result 2026' },
-  { id: 2, src: '/results/banner3.jpg', title: 'School 2nd Unit Test Results - Detailed' },
-  { id: 3, src: '/results/banner2.jpg', title: 'Our Forthcoming SSC Stars 2026' },
+  // Top 3 Group Banners
+  { id: 1, src: '/results/banner1.jpg', title: 'School 2nd Unit Test Result 2026 - Overall Performance' },
+  { id: 2, src: '/results/banner3.jpg', title: 'Admission Started for V to IX, 2026-27' },
+  { id: 3
+    , src: '/results/banner2.jpg', title: 'Our Forthcoming SSC Stars 2026' },
+  
+  // Single Achievements
+  { id: 4, src: '/results/banner4.jpeg', title: 'Shruti Rana - 97%' },
+  { id: 5, src: '/results/banner5.jpeg', title: 'Sadia Shaikh - 95%' },
+  { id: 6, src: '/results/banner6.jpeg', title: 'Sushant Rana - 94%' },
+  { id: 7, src: '/results/banner7.jpeg', title: 'Prachi Rajbhar - 94%' },
+  { id: 8, src: '/results/banner8.jpeg', title: 'Shalu Kewat - 92%' },
+  { id: 9, src: '/results/banner9.jpeg', title: 'Bryan Morris - 87%' },
+  { id: 10, src: '/results/banner10.jpeg', title: 'Kirti Viswakarma - 87%' },
+  { id: 11, src: '/results/banner11.jpeg', title: 'Prabha Yadav - 84%' },
 ]
+

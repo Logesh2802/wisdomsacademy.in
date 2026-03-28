@@ -48,8 +48,9 @@ export default function ClassJourneySection() {
 
         {/* Roadmap */}
         <div style={{ position: 'relative' }}>
-          {/* Connecting line */}
+          {/* Connecting line - Hidden on mobile */}
           <motion.div
+            className="roadmap-line"
             style={{
               position: 'absolute', top: 48, left: '12.5%', right: '12.5%',
               height: 3,
@@ -62,7 +63,7 @@ export default function ClassJourneySection() {
             transition={{ duration: 1.4, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
           />
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 24, position: 'relative', zIndex: 1 }}>
+          <div className="roadmap-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 24, position: 'relative', zIndex: 1 }}>
             {roadmapSteps.map((step, i) => (
               <motion.div
                 key={step.range}
@@ -73,13 +74,16 @@ export default function ClassJourneySection() {
               >
                 {/* Step node */}
                 <motion.div
+                  className="roadmap-node"
                   style={{
-                    width: 96, height: 96,
+                    width: 'clamp(80px, 12vw, 96px)', 
+                    height: 'clamp(80px, 12vw, 96px)',
                     borderRadius: '50%',
                     background: `radial-gradient(circle at 35% 35%, ${step.color}40, ${step.color}15)`,
                     border: `3px solid ${step.color}60`,
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    fontSize: '2.4rem', margin: '0 auto 24px',
+                    fontSize: 'clamp(1.8rem, 3vw, 2.4rem)', 
+                    margin: '0 auto 24px',
                     boxShadow: `0 0 30px ${step.color}25`,
                     cursor: 'pointer',
                   }}
@@ -91,7 +95,16 @@ export default function ClassJourneySection() {
                 </motion.div>
 
                 {/* Label */}
-                <div style={{ padding: '20px 16px', background: 'var(--glass-bg)', border: '1px solid var(--glass-border)', borderRadius: 18, transition: 'all 0.3s ease' }}
+                <div 
+                  className="roadmap-card"
+                  style={{ 
+                    padding: '20px 16px', 
+                    background: 'var(--glass-bg)', 
+                    border: '1px solid var(--glass-border)', 
+                    borderRadius: 18, 
+                    transition: 'all 0.3s ease',
+                    height: 'calc(100% - 120px)'
+                  }}
                   onMouseEnter={(e) => { e.currentTarget.style.borderColor = `${step.color}50`; e.currentTarget.style.background = `${step.color}08` }}
                   onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'var(--glass-border)'; e.currentTarget.style.background = 'var(--glass-bg)' }}
                 >
@@ -124,13 +137,16 @@ export default function ClassJourneySection() {
 
       {/* Responsive */}
       <style>{`
-        @media (max-width: 900px) {
-          .roadmap-grid { grid-template-columns: repeat(2, 1fr) !important; }
+        @media (max-width: 1024px) {
+          .roadmap-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 40px !important; }
+          .roadmap-line { display: none; }
         }
-        @media (max-width: 580px) {
-          .roadmap-grid { grid-template-columns: 1fr !important; }
+        @media (max-width: 640px) {
+          .roadmap-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+          .roadmap-card { height: auto !important; }
         }
       `}</style>
+
     </section>
   )
 }

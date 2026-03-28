@@ -76,7 +76,7 @@ export default function Contact() {
       </Helmet>
 
       {/* Hero */}
-      <section style={{ display: 'flex', alignItems: 'center', paddingTop: 130, paddingBottom: 50, background: 'var(--gradient-hero)', position: 'relative', overflow: 'hidden' }}>
+      <section style={{ display: 'flex', alignItems: 'center', paddingTop: 'clamp(100px, 12vw, 130px)', paddingBottom: 'clamp(30px, 5vw, 50px)', background: 'var(--gradient-hero)', position: 'relative', overflow: 'hidden' }}>
         <div className="grid-overlay" />
         <motion.div style={{ position: 'absolute', width: 600, height: 600, borderRadius: '50%', background: 'rgba(108,99,255,0.1)', filter: 'blur(120px)', top: -150, right: -150 }} animate={{ scale: [1, 1.15, 1], opacity: [0.1, 0.2, 0.1] }} transition={{ duration: 10, repeat: Infinity }} />
         
@@ -98,11 +98,9 @@ export default function Contact() {
         <div className="container">
           
           {/* Info cards row */}
-          <motion.div
+          <div
+            className="contact-info-grid"
             style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 24, marginBottom: 80 }}
-            variants={staggerContainerSlow}
-            initial="hidden"
-            animate={inView ? 'visible' : 'hidden'}
           >
             {contactInfo.map((c) => (
               <motion.div
@@ -110,6 +108,9 @@ export default function Contact() {
                 className="glass"
                 style={{ padding: 32, borderRadius: 24, textAlign: 'center', border: `1px solid ${c.color}15` }}
                 variants={fadeInUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
                 whileHover={{ y: -8, borderColor: `${c.color}50`, background: `${c.color}05` }}
               >
                 <div style={{ width: 60, height: 60, borderRadius: 18, background: `${c.color}15`, border: `1px solid ${c.color}25`, display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px', color: c.color, fontSize: '1.5rem', boxShadow: `0 0 20px ${c.color}20` }}>
@@ -121,21 +122,22 @@ export default function Contact() {
                 ))}
               </motion.div>
             ))}
-          </motion.div>
+          </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: 60, alignItems: 'start' }}>
+          <div className="contact-main-grid" style={{ display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: 60, alignItems: 'start' }}>
             
             {/* Form Column */}
             <motion.div
-              className="glass"
+              className="glass contact-form-container"
               style={{ padding: '56px 48px', borderRadius: 32, position: 'relative', overflow: 'hidden' }}
               variants={fadeInLeft}
               initial="hidden"
-              animate={inView ? 'visible' : 'hidden'}
+              whileInView="visible"
+              viewport={{ once: true }}
             >
               <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: 4, background: 'var(--gradient-primary)' }} />
               
-              <h2 style={{ fontSize: '2rem', fontWeight: 900, color: '#fff', marginBottom: 12 }}>Book Free Demo Class</h2>
+              <h2 style={{ fontSize: 'clamp(1.5rem, 4vw, 2rem)', fontWeight: 900, color: '#fff', marginBottom: 12 }}>Book Free Demo Class</h2>
               <p style={{ color: 'var(--text-secondary)', fontSize: '1rem', marginBottom: 40 }}>Choose your grade and subjects — we'll arrange a personalized demo session for your child.</p>
 
               {status === 'success' ? (
@@ -153,8 +155,8 @@ export default function Contact() {
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
-                    <div>
+                  <div className="contact-form-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
+                    <div className="form-group">
                       <label style={{ display: 'block', fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-muted)', marginBottom: 8, textTransform: 'uppercase', letterSpacing: '0.08em' }}>Student Name</label>
                       <div style={{ position: 'relative' }}>
                         <span style={{ position: 'absolute', left: 16, top: '50%', transform: 'translateY(-50%)', color: 'var(--primary-light)' }}><FiUser /></span>
@@ -169,7 +171,7 @@ export default function Contact() {
                         />
                       </div>
                     </div>
-                    <div>
+                    <div className="form-group">
                       <label style={{ display: 'block', fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-muted)', marginBottom: 8, textTransform: 'uppercase', letterSpacing: '0.08em' }}>Guardian Phone</label>
                       <div style={{ position: 'relative' }}>
                         <span style={{ position: 'absolute', left: 16, top: '50%', transform: 'translateY(-50%)', color: 'var(--accent-2)' }}><FiPhone /></span>
@@ -186,7 +188,7 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  <div>
+                  <div className="form-group">
                     <label style={{ display: 'block', fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-muted)', marginBottom: 8, textTransform: 'uppercase', letterSpacing: '0.08em' }}>Email Address</label>
                     <div style={{ position: 'relative' }}>
                       <span style={{ position: 'absolute', left: 16, top: '50%', transform: 'translateY(-50%)', color: 'var(--accent-3)' }}><FiMail /></span>
@@ -202,7 +204,7 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  <div>
+                  <div className="form-group">
                     <label style={{ display: 'block', fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-muted)', marginBottom: 8, textTransform: 'uppercase', letterSpacing: '0.08em' }}>Select Current Grade</label>
                     <div style={{ position: 'relative' }}>
                       <span style={{ position: 'absolute', left: 16, top: '50%', transform: 'translateY(-50%)', color: 'var(--accent)' }}><FiBookOpen /></span>
@@ -230,7 +232,7 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  <div>
+                  <div className="form-group">
                     <label style={{ display: 'block', fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-muted)', marginBottom: 8, textTransform: 'uppercase', letterSpacing: '0.08em' }}>Tell us more (Optional)</label>
                     <div style={{ position: 'relative' }}>
                       <span style={{ position: 'absolute', left: 16, top: 18, color: 'var(--secondary)' }}><FiMessageSquare /></span>
@@ -267,7 +269,8 @@ export default function Contact() {
             <motion.div
               variants={fadeInRight}
               initial="hidden"
-              animate={inView ? 'visible' : 'hidden'}
+              whileInView="visible"
+              viewport={{ once: true }}
               style={{ display: 'flex', flexDirection: 'column', gap: 24 }}
             >
               <div className="glass" style={{ padding: 40, borderRadius: 28, position: 'relative' }}>
@@ -276,9 +279,7 @@ export default function Contact() {
                 
                 {[
                   { q: 'Is there a free trial?', a: 'Yes! We offer 2 free demo sessions for any course you choose.' },
-                  // { q: 'Do you offer transport?', a: 'Limited van facility available for local primary students (Class 1-5).' },
                   { q: 'What are the batch timings?', a: 'Flexible morning & evening slots available for school-going students.' },
-                  // { q: 'Is scholarship available?', a: 'Yes, based on entrance test performance and previous board results.' },
                 ].map((faq, i) => (
                   <div key={i} style={{ marginBottom: 20 }}>
                      <div style={{ fontSize: '0.9rem', fontWeight: 800, color: 'var(--primary-light)', marginBottom: 6 }}>Q: {faq.q}</div>
@@ -306,9 +307,9 @@ export default function Contact() {
       </section>
 
       {/* Map Section */}
-      <section className="section" style={{ padding: '40px 0 100px 0', background: 'var(--bg-900)' }}>
+      <section className="section" style={{ padding: 'clamp(20px, 5vw, 40px) 0 clamp(40px, 8vw, 80px) 0', background: 'var(--bg-900)' }}>
          <div className="container">
-            <div style={{ height: 500, width: '100%', borderRadius: 32, overflow: 'hidden', position: 'relative', border: '1px solid var(--glass-border)', boxShadow: '0 40px 100px rgba(0,0,0,0.5)' }}>
+            <div style={{ height: 'clamp(300px, 50vh, 500px)', width: '100%', borderRadius: 32, overflow: 'hidden', position: 'relative', border: '1px solid var(--glass-border)', boxShadow: '0 40px 100px rgba(0,0,0,0.5)' }}>
                <div style={{ position: 'absolute', inset: 0, background: 'rgba(10,10,30,0.05)', zIndex: 1, pointerEvents: 'none' }} />
                <iframe 
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.812!2d72.884934!3d19.093367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8702cad8a0d%3A0x10d102e389445171!2sWISDOM'S%20ACADEMY!5e0!3m2!1sen!2sin!4v1711550000000!5m2!1sen!2sin" 
@@ -319,13 +320,27 @@ export default function Contact() {
                   loading="lazy" 
                   referrerPolicy="no-referrer-when-downgrade"
                />
-               <motion.div className="glass" style={{ position: 'absolute', bottom: 30, left: '50%', transform: 'translateX(-50%)', padding: '14px 28px', borderRadius: 100, zIndex: 2, pointerEvents: 'none', display: 'flex', alignItems: 'center', gap: 12, width: 'max-content', maxWidth: '90%' }} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-                  <FiMapPin style={{ color: 'var(--secondary)' }} />
-                  <span style={{ fontWeight: 700, fontSize: '0.85rem' }}>C/7 LAXMI NIWAS, PIPELINE KAJUPADA, KURLA, MUMBAI 400072</span>
+               <motion.div className="glass map-label" style={{ position: 'absolute', bottom: 30, left: '50%', transform: 'translateX(-50%)', padding: '14px 28px', borderRadius: 100, zIndex: 2, pointerEvents: 'none', display: 'flex', alignItems: 'center', gap: 12, width: 'max-content', maxWidth: '85%' }} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+                  <FiMapPin style={{ color: 'var(--secondary)', flexShrink: 0 }} />
+                  <span style={{ fontWeight: 700, fontSize: '0.8rem', lineHeight: 1.4 }}>C/7 LAXMI NIWAS, PIPELINE KAJUPADA, KURLA, MUMBAI 400072</span>
                </motion.div>
             </div>
          </div>
       </section>
+
+      <style>{`
+        @media (max-width: 1024px) {
+          .contact-info-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 20px !important; }
+          .contact-main-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+        }
+        @media (max-width: 640px) {
+          .contact-info-grid { grid-template-columns: 1fr !important; }
+          .contact-form-row { grid-template-columns: 1fr !important; }
+          .contact-form-container { padding: 40px 24px !important; }
+          .map-label { padding: 12px 20px !important; bottom: 20px !important; }
+          .map-label span { fontSize: 0.75rem !important; }
+        }
+      `}</style>
     </PageWrapper>
   )
 }

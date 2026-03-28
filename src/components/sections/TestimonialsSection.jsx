@@ -13,8 +13,8 @@ export default function TestimonialsSection() {
     <section className="section testimonials-section" ref={ref}>
       <motion.div
         className="orb orb-blue"
-        style={{ width: 500, height: 500, bottom: -150, left: -150 }}
-        animate={{ scale: [1, 1.2, 1] }}
+        style={{ width: 300, height: 300, bottom: -100, left: -100, filter: 'blur(50px)' }}
+        animate={{ opacity: [0.1, 0.2, 0.1] }}
         transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
       />
 

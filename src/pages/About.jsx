@@ -33,7 +33,7 @@ export default function About() {
       </Helmet>
 
       {/* Hero */}
-      <section style={{ display: 'flex', alignItems: 'center', paddingTop: 130, paddingBottom: 50, background: 'var(--gradient-hero)', position: 'relative', overflow: 'hidden' }}>
+      <section style={{ display: 'flex', alignItems: 'center', paddingTop: 'clamp(100px, 12vw, 130px)', paddingBottom: 'clamp(30px, 5vw, 50px)', background: 'var(--gradient-hero)', position: 'relative', overflow: 'hidden' }}>
         <div className="grid-overlay" />
         <motion.div style={{ position: 'absolute', width: 600, height: 600, borderRadius: '50%', background: 'rgba(108,99,255,0.12)', filter: 'blur(100px)', top: -200, left: -200 }} animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.2, 0.1] }} transition={{ duration: 12, repeat: Infinity }} />
         
@@ -138,9 +138,7 @@ export default function About() {
 
       <FacultySection />
       
-      <div style={{ paddingBottom: 100 }}>
-         <CTASection />
-      </div>
+      <CTASection />
 
       <style>{`
         @media (max-width: 1024px) {
